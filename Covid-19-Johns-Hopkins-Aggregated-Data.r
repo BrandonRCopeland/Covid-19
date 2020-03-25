@@ -8,11 +8,11 @@ options(width = 300)
 
 setwd("C:/Users/brcopela/OneDrive")
 
-confirmed <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv")
-deaths <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv")
+confirmed <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
+deaths <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")
 recovered <- getURL("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv")
 
-df.confirmed <- read.csv(text = confirmed, stringsAsFactors = FALSE)# %>% filter(Province.State %in% c("King County, WA", "Pierce County, WA", "Washington"))
+df.confirmed <- read.csv(text = confirmed, stringsAsFactors = FALSE)
 df.dead <- read.csv(text = deaths, stringsAsFactors = FALSE)
 df.recovered <- read.csv(text = recovered, stringsAsFactors = FALSE)
 
